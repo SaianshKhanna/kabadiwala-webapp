@@ -1,0 +1,1 @@
+document.querySelectorAll('form').forEach(form => form.addEventListener('submit', () => { const name = document.querySelector('#profile-name')?.value.trim(); if (name) { try { const user = JSON.parse(localStorage.getItem('kc_user') || '{}'); user.name = name; localStorage.setItem('kc_user', JSON.stringify(user)); } catch {} } }));
